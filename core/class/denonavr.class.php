@@ -32,6 +32,10 @@ class denonavr extends eqLogic {
 
 	/*     * *********************Méthodes d'instance************************* */
 
+	public function preInsert() {
+		$this->setCategory('multimedia', 1);
+	}
+
 	public function preUpdate() {
 		if ($this->getConfiguration('ip') == '') {
 			throw new Exception(__('Le champs IP ne peut etre vide', __FILE__));
@@ -44,7 +48,7 @@ class denonavr extends eqLogic {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('power_state');
 			$cmd->setIsVisible(1);
-			$cmd->setName(__('Alimentation', __FILE__));
+			$cmd->setName(__('Etat', __FILE__));
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('binary');
@@ -70,7 +74,7 @@ class denonavr extends eqLogic {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('volume');
 			$cmd->setIsVisible(1);
-			$cmd->setName(__('Volume état', __FILE__));
+			$cmd->setName(__('Volume', __FILE__));
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('numeric');
