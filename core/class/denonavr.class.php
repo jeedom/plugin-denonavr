@@ -292,7 +292,7 @@ class denonavr extends eqLogic {
 
 	public function getAmpInfo() {
 		$zone = '';
-		if ($eqLogic->getConfiguration('zone', 'main') == 2) {
+		if ($this->getConfiguration('zone', 'main') == 2) {
 			$zone = '?ZoneName=ZONE2';
 		}
 		$request_http = new com_http('http://' . $this->getConfiguration('ip') . '/goform/formMainZone_MainZoneXml.xml' . $zone);
@@ -322,8 +322,8 @@ class denonavr extends eqLogic {
 			return;
 		}
 		$cmd = $this->getCmd(null, 'power_state');
-		if (is_object($cmd) && isset($infos['Power'])) {
-			$value = ($infos['Power'] == 'STANDBY') ? 0 : 1;
+		if (is_object($cmd) && isset($infos['ZonePower'])) {
+			$value = ($infos['ZonePower'] == 'OFF') ? 0 : 1;
 			$value = $cmd->formatValue($value);
 			if ($value != $cmd->execCmd(null, 2)) {
 				$cmd->setCollectDate('');
