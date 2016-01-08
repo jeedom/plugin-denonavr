@@ -76,6 +76,9 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('numeric');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setTemplate('dashboard', 'tile');
+		$cmd->setTemplate('mobile', 'tile');
+		$cmd->setUnite('%');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'sound_mode');
@@ -109,6 +112,32 @@ class denonavr extends eqLogic {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('volume_m');
 			$cmd->setName(__('Volume-', __FILE__));
+			$cmd->setIsVisible(1);
+		}
+		$cmd->setType('action');
+		$cmd->setSubType('other');
+		$cmd->setEventOnly(1);
+		$cmd->setEqLogic_id($this->getId());
+		$cmd->save();
+
+		$cmd = $this->getCmd(null, 'on');
+		if (!is_object($cmd)) {
+			$cmd = new denonavrCmd();
+			$cmd->setLogicalId('on');
+			$cmd->setName(__('On', __FILE__));
+			$cmd->setIsVisible(1);
+		}
+		$cmd->setType('action');
+		$cmd->setSubType('other');
+		$cmd->setEventOnly(1);
+		$cmd->setEqLogic_id($this->getId());
+		$cmd->save();
+
+		$cmd = $this->getCmd(null, 'off');
+		if (!is_object($cmd)) {
+			$cmd = new denonavrCmd();
+			$cmd->setLogicalId('off');
+			$cmd->setName(__('Off', __FILE__));
 			$cmd->setIsVisible(1);
 		}
 		$cmd->setType('action');
@@ -334,10 +363,10 @@ class denonavrCmd extends cmd {
 
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
-		if ($this->getLogicalId() == 'ON') {
+		if ($this->getLogicalId() == 'on') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON');
 			$request_http->exec();
-		} else if ($this->getLogicalId() == 'OFF') {
+		} else if ($this->getLogicalId() == 'off') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF');
 			$request_http->exec();
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF&ZoneName=ZONE2');
