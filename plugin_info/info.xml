@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>denonavr</id>
+    <name>Denon AVR</name>
+    <description>Plugin permettant de piloter les amplificateurs Denon</description>
+    <icon>fa fa-keyboard-o</icon>
+    <licence>AGPL</licence>
+    <author>Loïc Gevrey</author>
+    <require>2.0</require>
+    <category>multimedia</category>
+</info>
+
