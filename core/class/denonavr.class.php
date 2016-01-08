@@ -291,7 +291,11 @@ class denonavr extends eqLogic {
 	}
 
 	public function getAmpInfo() {
-		$request_http = new com_http('http://' . $this->getConfiguration('ip') . '/goform/formMainZone_MainZoneXml.xml');
+		$zone = '';
+		if ($eqLogic->getConfiguration('zone', 'main') == 2) {
+			$zone = '?ZoneName=ZONE2';
+		}
+		$request_http = new com_http('http://' . $this->getConfiguration('ip') . '/goform/formMainZone_MainZoneXml.xml' . $zone);
 		$result = trim($request_http->exec());
 		$xml = simplexml_load_string($result);
 		$data = json_decode(json_encode(simplexml_load_string($result)), true);
@@ -367,24 +371,26 @@ class denonavrCmd extends cmd {
 
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
+		$zone = '';
+		if ($eqLogic->getConfiguration('zone', 'main') == 2) {
+			$zone = '&ZoneName=ZONE2';
+		}
 		if ($this->getLogicalId() == 'on') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON');
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'off') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF');
-			$request_http->exec();
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF&ZoneName=ZONE2');
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'volume_p') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeBtn%2F%3E');
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeBtn%2F%3E' . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'volume_m') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeBtn%2F%3C');
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeBtn%2F%3C' . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'refresh') {
 
 		} else {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId());
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
 			$request_http->exec();
 		}
 		sleep(1);
