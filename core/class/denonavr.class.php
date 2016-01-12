@@ -82,7 +82,7 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setTemplate('dashboard', 'tile');
 		$cmd->setTemplate('mobile', 'tile');
-		$cmd->setUnite('%');
+		$cmd->setUnite('dB');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'sound_mode');
@@ -155,6 +155,19 @@ class denonavr extends eqLogic {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('refresh');
 			$cmd->setName(__('Rafraîchir', __FILE__));
+			$cmd->setIsVisible(1);
+		}
+		$cmd->setType('action');
+		$cmd->setSubType('other');
+		$cmd->setEventOnly(1);
+		$cmd->setEqLogic_id($this->getId());
+		$cmd->save();
+
+		$cmd = $this->getCmd(null, 'mute');
+		if (!is_object($cmd)) {
+			$cmd = new denonavrCmd();
+			$cmd->setLogicalId('mute');
+			$cmd->setName(__('Muet', __FILE__));
 			$cmd->setIsVisible(1);
 		}
 		$cmd->setType('action');
@@ -308,7 +321,6 @@ class denonavr extends eqLogic {
 				$data[$key] = $value['value'];
 			}
 		}
-		$data['MasterVolume'] += 80;
 		return $data;
 	}
 
@@ -389,6 +401,9 @@ class denonavrCmd extends cmd {
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'refresh') {
 
+		} else if ($this->getLogicalId() == 'mute') {
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
+			$request_http->exec();
 		} else {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
 			$request_http->exec();
