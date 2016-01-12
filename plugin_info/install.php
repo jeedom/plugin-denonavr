@@ -18,4 +18,10 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
+function denonavr_update() {
+	foreach (camera::byType('denonavr') as $camera) {
+		$camera->save();
+	}
+}
+
 ?>
