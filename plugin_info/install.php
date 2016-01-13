@@ -20,7 +20,11 @@ require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 function denonavr_update() {
 	foreach (denonavr::byType('denonavr') as $denonavr) {
-		$denonavr->save();
+		try {
+			$denonavr->save();
+		} catch (Exception $e) {
+
+		}
 	}
 }
 
