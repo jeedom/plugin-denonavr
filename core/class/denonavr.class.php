@@ -98,11 +98,11 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
-		$cmd = $this->getCmd(null, 'volume_p');
+		$cmd = $this->getCmd(null, 'volume_m');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
-			$cmd->setLogicalId('volume_p');
-			$cmd->setName(__('Volume+', __FILE__));
+			$cmd->setLogicalId('volume_m');
+			$cmd->setName(__('Volume-', __FILE__));
 			$cmd->setIsVisible(1);
 		}
 		$cmd->setType('action');
@@ -111,11 +111,11 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
-		$cmd = $this->getCmd(null, 'volume_m');
+		$cmd = $this->getCmd(null, 'volume_p');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
-			$cmd->setLogicalId('volume_m');
-			$cmd->setName(__('Volume-', __FILE__));
+			$cmd->setLogicalId('volume_p');
+			$cmd->setName(__('Volume+', __FILE__));
 			$cmd->setIsVisible(1);
 		}
 		$cmd->setType('action');
