@@ -54,6 +54,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('binary');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setDisplay('generic_type', 'ENERGY_STATE');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'input');
@@ -67,6 +68,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('string');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'volume');
@@ -83,6 +85,7 @@ class denonavr extends eqLogic {
 		$cmd->setTemplate('dashboard', 'tile');
 		$cmd->setTemplate('mobile', 'tile');
 		$cmd->setUnite('dB');
+		$cmd->setDisplay('generic_type', 'LIGHT_STATE');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'sound_mode');
@@ -96,6 +99,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('string');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'volume_m');
@@ -135,6 +139,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('other');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setDisplay('generic_type', 'ENERGY_ON');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'off');
@@ -148,6 +153,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('other');
 		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
+		$cmd->setDisplay('generic_type', 'ENERGY_OFF');
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'refresh');
