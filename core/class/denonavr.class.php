@@ -52,7 +52,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('binary');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_STATE');
 		$cmd->save();
@@ -66,7 +65,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('string');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
@@ -80,7 +78,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('numeric');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setTemplate('dashboard', 'tile');
 		$cmd->setTemplate('mobile', 'tile');
@@ -97,7 +94,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('info');
 		$cmd->setSubType('string');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
@@ -111,7 +107,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
@@ -124,7 +119,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
@@ -137,7 +131,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_ON');
 		$cmd->save();
@@ -151,7 +144,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_OFF');
 		$cmd->save();
@@ -165,7 +157,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
@@ -178,7 +169,6 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
-		$cmd->setEventOnly(1);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
