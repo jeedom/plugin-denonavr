@@ -79,16 +79,22 @@ foreach (object::all() as $object) {
    <div class="form-group">
     <label class="col-sm-3 control-label">{{IP}}</label>
     <div class="col-sm-3">
-      <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="ip" />
+      <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip" />
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-3 control-label">{{Zone}}</label>
     <div class="col-sm-3">
-    <select type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone" >
+    <select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="zone" >
         <option value="main">Principale</option>
         <option value="2">2</option>
       </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="col-sm-3 control-label">{{Peut etre eteint}}</label>
+    <div class="col-sm-3">
+      <input type="checkbox" class="eqLogicAttr form-control bootstrapSwitch" data-l1key="configuration" data-l2key="canBeShutdown" />
     </div>
   </div>
 </fieldset>

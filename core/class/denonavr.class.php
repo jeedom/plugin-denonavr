@@ -305,7 +305,16 @@ class denonavr extends eqLogic {
 			$zone = '?ZoneName=ZONE2';
 		}
 		$request_http = new com_http('http://' . $this->getConfiguration('ip') . '/goform/formMainZone_MainZoneXml.xml' . $zone);
-		$result = trim($request_http->exec());
+		try {
+			$result = trim($request_http->exec());
+		} catch (Exception $e) {
+			if ($this->getConfiguration('canBeShutdown') == 1) {
+				return;
+			} else {
+				throw new $e;
+			}
+		}
+
 		$xml = simplexml_load_string($result);
 		$data = json_decode(json_encode(simplexml_load_string($result)), true);
 		$data['VideoSelectLists'] = array();
@@ -327,6 +336,9 @@ class denonavr extends eqLogic {
 		try {
 			$infos = $this->getAmpInfo();
 		} catch (Exception $e) {
+			return;
+		}
+		if (!is_array($infos)) {
 			return;
 		}
 		$cmd = $this->getCmd(null, 'power_state');
