@@ -1,0 +1,9 @@
+{
+	"id" : "denonavr",
+	"name" : "Dénon",
+	"description" : "Plugin permettant de piloter les amplificateurs Denon",
+	"licence" : "AGPL",
+	"author" : "Loïc",
+	"require" : "2.3",
+	"category" : "multimedia"
+}

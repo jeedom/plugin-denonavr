@@ -3,10 +3,9 @@
     <id>denonavr</id>
     <name>Denon</name>
     <description>Plugin permettant de piloter les amplificateurs Denon</description>
-    <icon>fa fa-keyboard-o</icon>
     <licence>AGPL</licence>
-    <author>Loïc Gevrey</author>
-    <require>1.212.0</require>
+    <author>Loïc</author>
+    <require>2.3</require>
     <category>multimedia</category>
 </info>
 
