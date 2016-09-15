@@ -318,8 +318,10 @@ class denonavr extends eqLogic {
 		$xml = simplexml_load_string($result);
 		$data = json_decode(json_encode(simplexml_load_string($result)), true);
 		$data['VideoSelectLists'] = array();
-		foreach ($xml->VideoSelectLists->value as $VideoSelectList) {
-			$data['VideoSelectLists'][(string) $VideoSelectList["index"]] = (string) $VideoSelectList;
+		if (is_array($xml->VideoSelectLists->value)) {
+			foreach ($xml->VideoSelectLists->value as $VideoSelectList) {
+				$data['VideoSelectLists'][(string) $VideoSelectList["index"]] = (string) $VideoSelectList;
+			}
 		}
 		foreach ($data as $key => $value) {
 			if (isset($value['value'])) {
