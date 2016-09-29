@@ -1,0 +1,42 @@
+== Plugin Konfiguration
+
+Après téléchargement du plugin, il vous faudra simplement activer le plugin :
+
+image::../images/denonavr.PNG[]
+
+== Geräte Konfiguration
+
+La configuration des équipements Denon est accessible à partir du menu plugin : 
+
+image::../images/denonavr2.PNG[]
+
+Voilà à quoi ressemble la page du plugin Denon (ici avec déjà 1 équipements) : 
+
+image::../images/denonavr3.PNG[]
+
+[TIP]
+Wie an vielen Stellen in Jeedom kann mit dem Mauszeiger ganz links, ein Menü mit Schnellzugriff aufgerufen werden (Sie können in Ihrem Profil immer sichtbar einstellen).  
+
+Sobald Sie eines davon anklicken, erhalten Sie : 
+
+image::../images/denonavr4.PNG[]
+
+Hier finden sie die ganze Konfiguration Ihrer Geräte: 
+
+* *Nom de l'équipement Denon* : nom de votre équipement Denon,
+* *Objet parent* : indique l'objet parent auquel appartient l'équipement,
+* *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
+* *Activer* : permet de rendre votre équipement actif,
+* *Visible* : rend votre équipement visible sur le dashboard,
+* *IP* : ip de l'amplificateur denon
+* *Zone* : zone à controler (principal ou zone 2)
+
+En-dessous vous retrouvez la liste des commandes : 
+
+* *Nom* : le nom affiché sur le dashboard,
+* *Configuration avancé* : permet d'afficher la fenetre de configuration avancée de la commande,
+* *Options* : vous permet d'afficher ou de masquer certaines commandes et/ou d'en historiser
+* *Tester* : permet de tester la commande
+
+[NOTE]
+Les commandes sont générées automatiquement en fonction du model de votre amplificateur
