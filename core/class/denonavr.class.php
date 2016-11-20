@@ -314,7 +314,6 @@ class denonavr extends eqLogic {
 				throw new $e;
 			}
 		}
-
 		$xml = simplexml_load_string($result);
 		$data = json_decode(json_encode(simplexml_load_string($result)), true);
 		$data['VideoSelectLists'] = array();
@@ -343,41 +342,17 @@ class denonavr extends eqLogic {
 		if (!is_array($infos)) {
 			return;
 		}
-		$cmd = $this->getCmd(null, 'power_state');
-		if (is_object($cmd) && isset($infos['ZonePower'])) {
-			$value = ($infos['ZonePower'] == 'OFF') ? 0 : 1;
-			$value = $cmd->formatValue($value);
-			if ($value != $cmd->execCmd(null, 2)) {
-				$cmd->setCollectDate('');
-				$cmd->event($value);
-			}
+		if (isset($infos['ZonePower'])) {
+			$this->checkAndUpdateCmd('power_state', ($infos['ZonePower'] == 'OFF') ? 0 : 1);
 		}
-
-		$cmd = $this->getCmd(null, 'input');
-		if (is_object($cmd) && isset($infos['InputFuncSelect'])) {
-			$value = $cmd->formatValue($infos['InputFuncSelect']);
-			if ($value != $cmd->execCmd(null, 2)) {
-				$cmd->setCollectDate('');
-				$cmd->event($value);
-			}
+		if (isset($infos['InputFuncSelect'])) {
+			$this->checkAndUpdateCmd('input', $infos['InputFuncSelect']);
 		}
-
-		$cmd = $this->getCmd(null, 'volume');
-		if (is_object($cmd) && isset($infos['MasterVolume'])) {
-			$value = $cmd->formatValue($infos['MasterVolume']);
-			if ($value != $cmd->execCmd(null, 2)) {
-				$cmd->setCollectDate('');
-				$cmd->event($value);
-			}
+		if (isset($infos['MasterVolume'])) {
+			$this->checkAndUpdateCmd('volume', $infos['MasterVolume']);
 		}
-
-		$cmd = $this->getCmd(null, 'sound_mode');
-		if (is_object($cmd) && isset($infos['selectSurround'])) {
-			$value = $cmd->formatValue($infos['selectSurround']);
-			if ($value != $cmd->execCmd(null, 2)) {
-				$cmd->setCollectDate('');
-				$cmd->event($value);
-			}
+		if (isset($infos['selectSurround'])) {
+			$this->checkAndUpdateCmd('sound_mode', $infos['selectSurround']);
 		}
 	}
 
