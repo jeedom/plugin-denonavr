@@ -76,7 +76,7 @@ class denonavr extends eqLogic {
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('volume');
-			$cmd->setIsVisible(1);
+			$cmd->setIsVisible(0);
 			$cmd->setName(__('Volume', __FILE__));
 		}
 		$cmd->setType('info');
@@ -84,9 +84,10 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setTemplate('dashboard', 'tile');
 		$cmd->setTemplate('mobile', 'tile');
-		$cmd->setUnite('dB');
+		$cmd->setUnite('%');
 		$cmd->setDisplay('generic_type', 'LIGHT_STATE');
 		$cmd->save();
+		$volume_id = $cmd->getId();
 
 		$cmd = $this->getCmd(null, 'sound_mode');
 		if (!is_object($cmd)) {
@@ -110,6 +111,7 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('slider');
+		$cmd->setValue($volume_id);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
 
@@ -340,7 +342,7 @@ class denonavr extends eqLogic {
 			$this->checkAndUpdateCmd('input', $infos['InputFuncSelect']);
 		}
 		if (isset($infos['MasterVolume'])) {
-			$this->checkAndUpdateCmd('volume', $infos['MasterVolume']);
+			$this->checkAndUpdateCmd('volume', self::convertDbToPercent($infos['MasterVolume']));
 		}
 		if (isset($infos['selectSurround'])) {
 			$this->checkAndUpdateCmd('sound_mode', $infos['selectSurround']);
@@ -348,11 +350,13 @@ class denonavr extends eqLogic {
 	}
 
 	public function convertPercentToDb($_volume) {
-		return ($_volume * (self::MAX_VOLUME - self::MIN_VOLUME) / 100) + self::MIN_VOLUME;
+		$return = ($_volume * (self::MAX_VOLUME - self::MIN_VOLUME) / 100) + self::MIN_VOLUME;
+		$return = floor($return * 2) / 2;
+		return $return;
 	}
 
 	public function convertDbToPercent($_volume) {
-		return ($_volume - self::MIN_VOLUME) / (self::MAX_VOLUME - self::MIN_VOLUME);
+		return round(($_volume - self::MIN_VOLUME) / (self::MAX_VOLUME - self::MIN_VOLUME) * 100);
 	}
 
 	/*     * **********************Getteur Setteur*************************** */
@@ -377,8 +381,7 @@ class denonavrCmd extends cmd {
 		} else if ($this->getLogicalId() == 'off') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
 			$request_http->exec();
-		} else if ($this->getLogicalId() == 'volume') {
-
+		} else if ($this->getLogicalId() == 'volume_set') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . denonavr::convertPercentToDb($_options['slider']) . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'mute') {
