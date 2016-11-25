@@ -50,7 +50,7 @@ class denonavr extends eqLogic {
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
 			$cmd->setLogicalId('power_state');
-			$cmd->setIsVisible(1);
+			$cmd->setIsVisible(0);
 			$cmd->setName(__('Etat', __FILE__));
 		}
 		$cmd->setType('info');
@@ -58,6 +58,7 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_STATE');
 		$cmd->save();
+		$power_state_id = $cmd->getId();
 
 		$cmd = $this->getCmd(null, 'input');
 		if (!is_object($cmd)) {
@@ -82,8 +83,6 @@ class denonavr extends eqLogic {
 		$cmd->setType('info');
 		$cmd->setSubType('numeric');
 		$cmd->setEqLogic_id($this->getId());
-		$cmd->setTemplate('dashboard', 'tile');
-		$cmd->setTemplate('mobile', 'tile');
 		$cmd->setUnite('%');
 		$cmd->setDisplay('generic_type', 'LIGHT_STATE');
 		$cmd->save();
@@ -111,6 +110,8 @@ class denonavr extends eqLogic {
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('slider');
+		$cmd->setConfiguration('minValue', self::MIN_VOLUME);
+		$cmd->setConfiguration('maxValue', self::MAX_VOLUME);
 		$cmd->setValue($volume_id);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
@@ -121,11 +122,14 @@ class denonavr extends eqLogic {
 			$cmd->setLogicalId('on');
 			$cmd->setName(__('On', __FILE__));
 			$cmd->setIsVisible(1);
+			$cmd->setTemplate('dashboard', 'prise');
+			$cmd->setTemplate('mobile', 'prise');
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_ON');
+		$cmd->setValue($power_state_id);
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'off');
@@ -134,11 +138,14 @@ class denonavr extends eqLogic {
 			$cmd->setLogicalId('off');
 			$cmd->setName(__('Off', __FILE__));
 			$cmd->setIsVisible(1);
+			$cmd->setTemplate('dashboard', 'prise');
+			$cmd->setTemplate('mobile', 'prise');
 		}
 		$cmd->setType('action');
 		$cmd->setSubType('other');
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'ENERGY_OFF');
+		$cmd->setValue($power_state_id);
 		$cmd->save();
 
 		$cmd = $this->getCmd(null, 'refresh');
@@ -342,21 +349,11 @@ class denonavr extends eqLogic {
 			$this->checkAndUpdateCmd('input', $infos['InputFuncSelect']);
 		}
 		if (isset($infos['MasterVolume'])) {
-			$this->checkAndUpdateCmd('volume', self::convertDbToPercent($infos['MasterVolume']));
+			$this->checkAndUpdateCmd('volume', $infos['MasterVolume']);
 		}
 		if (isset($infos['selectSurround'])) {
 			$this->checkAndUpdateCmd('sound_mode', $infos['selectSurround']);
 		}
-	}
-
-	public function convertPercentToDb($_volume) {
-		$return = ($_volume * (self::MAX_VOLUME - self::MIN_VOLUME) / 100) + self::MIN_VOLUME;
-		$return = floor($return * 2) / 2;
-		return $return;
-	}
-
-	public function convertDbToPercent($_volume) {
-		return round(($_volume - self::MIN_VOLUME) / (self::MAX_VOLUME - self::MIN_VOLUME) * 100);
 	}
 
 	/*     * **********************Getteur Setteur*************************** */
@@ -382,7 +379,7 @@ class denonavrCmd extends cmd {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'volume_set') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . denonavr::convertPercentToDb($_options['slider']) . $zone);
+			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
 			$request_http->exec();
 		} else if ($this->getLogicalId() == 'mute') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
