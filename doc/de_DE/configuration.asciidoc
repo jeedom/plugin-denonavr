@@ -6,7 +6,7 @@ image::../images/denonavr.PNG[]
 
 == Geräte Konfiguration
 
-La configuration des équipements Denon est accessible à partir du menu plugin : 
+Die Konfiguration von Denon-Geräten ist in dem Plugin-Menü verfügbar : 
 
 image::../images/denonavr2.PNG[]
 
