@@ -6,7 +6,7 @@ image::../images/denonavr.PNG[]
 
 == Equipment configuration
 
-La configuration des équipements Denon est accessible à partir du menu plugin : 
+La configuration des équipements Denon est accessible à partir du menu Plugins : 
 
 image::../images/denonavr2.PNG[]
 
@@ -28,15 +28,15 @@ Vous retrouvez ici toute la configuration de votre équipement :
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
 * *Activer* : permet de rendre votre équipement actif,
 * *Visible* : rend votre équipement visible sur le dashboard,
-* *IP* : ip de l'amplificateur denon
-* *Zone* : zone à controler (principal ou zone 2)
+* *IP* : IP de l'amplificateur denon
+* *Zone* : zone à contrôler (principale ou zone 2)
 
-En-dessous vous retrouvez la liste des commandes : 
+En dessous vous retrouvez la liste des commandes : 
 
 * *Nom* : le nom affiché sur le dashboard,
-* *Configuration avancé* : permet d'afficher la fenetre de configuration avancée de la commande,
+* *Configuration avancé* : permet d'afficher la fenêtre de configuration avancée de la commande,
 * *Options* : vous permet d'afficher ou de masquer certaines commandes et/ou d'en historiser
 * *Tester* : permet de tester la commande
 
 [NOTE]
-Les commandes sont générées automatiquement en fonction du model de votre amplificateur
+Les commandes sont générées automatiquement en fonction du modèle de votre amplificateur
