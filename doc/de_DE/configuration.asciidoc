@@ -1,25 +1,10 @@
 == Plugin Konfiguration
 
-Après téléchargement du plugin, il vous faudra simplement activer le plugin :
-
-image::../images/denonavr.PNG[]
+Après téléchargement du plugin, il vous faudra simplement activer le plugin
 
 == Geräte Konfiguration
 
-La configuration des équipements Denon est accessible à partir du menu Plugins : 
-
-image::../images/denonavr2.PNG[]
-
-Voilà à quoi ressemble la page du plugin Denon (ici avec déjà 1 équipements) : 
-
-image::../images/denonavr3.PNG[]
-
-[TIP]
-Wie an vielen Stellen in Jeedom kann mit dem Mauszeiger ganz links, ein Menü mit Schnellzugriff aufgerufen werden (Sie können in Ihrem Profil immer sichtbar einstellen).  
-
-Sobald Sie eines davon anklicken, erhalten Sie : 
-
-image::../images/denonavr4.PNG[]
+La configuration des équipements Denon est accessible à partir du menu Plugins puis multimedia
 
 Hier finden sie die ganze Konfiguration Ihrer Geräte: 
 
