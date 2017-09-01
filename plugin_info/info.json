@@ -7,5 +7,5 @@
 	"require" : "3.0",
 	"category" : "multimedia",
 	"changelog" : "https://github.com/jeedom/plugin-denonavr/blob/stable/doc/fr_FR/changelog.asciidoc",
-	"documentation" : "https://github.com/jeedom/plugin-denonavr/blob/stable/doc/fr_FR/index.asciidoc"
+	"documentation" : "https://github.com/jeedom/plugin-denonavr/blob/stable/doc/index.asciidoc"
 }

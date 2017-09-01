@@ -1,24 +1,24 @@
-Français 
+= Français 
 
 include::fr_FR/index.asciidoc[]
 
-English 
+= English 
 
 include::en_US/index.asciidoc[]
 
-Allemand 
+= Allemand 
 
 include::de_DE/index.asciidoc[]
 
-Espagnol 
+= Espagnol 
 
 include::es_ES/index.asciidoc[]
 
-Indien 
+= Indien 
 
 include::id_ID/index.asciidoc[]
 
-Russe
+= Russe
 
 include::ru_RU/index.asciidoc[]
 
