@@ -1,12 +1,24 @@
-Français : include::fr_FR/index.asciidoc[]
+Français 
 
-English : include::en_US/index.asciidoc[]
+include::fr_FR/index.asciidoc[]
 
-Allemand : include::de_DE/index.asciidoc[]
+English 
 
-Espagnol : include::es_ES/index.asciidoc[]
+include::en_US/index.asciidoc[]
 
-Indien : include::id_ID/index.asciidoc[]
+Allemand 
 
-Russe : include::ru_RU/index.asciidoc[]
+include::de_DE/index.asciidoc[]
+
+Espagnol 
+
+include::es_ES/index.asciidoc[]
+
+Indien 
+
+include::id_ID/index.asciidoc[]
+
+Russe
+
+include::ru_RU/index.asciidoc[]
 
