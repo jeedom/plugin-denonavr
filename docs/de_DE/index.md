@@ -16,7 +16,7 @@ Configuration des équipements
 La configuration des équipements Denon est accessible à partir du menu
 Plugins puis multimedia
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Hier finden sie die ganze Konfiguration Ihrer Geräte:
 
 -   **Nom de l’équipement Denon** : nom de votre équipement Denon,
 
@@ -34,7 +34,7 @@ Vous retrouvez ici toute la configuration de votre équipement :
 
 -   **Zone** : zone à contrôler (principale ou zone 2)
 
-En dessous vous retrouvez la liste des commandes :
+Im unteren Bereich finden sie eine Liste der Befehle :
 
 -   **Nom** : le nom affiché sur le dashboard,
 
