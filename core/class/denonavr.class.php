@@ -374,19 +374,19 @@ class denonavrCmd extends cmd {
 		}
 		if ($this->getLogicalId() == 'on') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
-			$request_http->exec();
+			$request_http->exec(60);
 		} else if ($this->getLogicalId() == 'off') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
-			$request_http->exec();
+			$request_http->exec(60);
 		} else if ($this->getLogicalId() == 'volume_set') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
-			$request_http->exec();
+			$request_http->exec(60);
 		} else if ($this->getLogicalId() == 'mute') {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
-			$request_http->exec();
+			$request_http->exec(60);
 		} else {
 			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
-			$request_http->exec();
+			$request_http->exec(60);
 		}
 		sleep(1);
 		$eqLogic->updateInfo();
