@@ -4,7 +4,8 @@ l’amplificateur et contrôler le volume. Vous avez aussi un retour d’état
 indiquant si la zone est active, le niveau de volume, l’entrée
 selectionnée et le type audio.
 
-== Plugin configuration
+Plugin configuration
+=======================
 
 Après téléchargement du plugin, il vous faudra simplement activer le
 plugin
@@ -19,7 +20,7 @@ You can find here the full configuration of your device :
 
 -   **Nom de l’équipement Denon** : nom de votre équipement Denon,
 
--   **Parent Object** : means the parent object the equipment depend
+-   **Parent Object**: Specifies the parent object to which belongs
     equipment,
 
 -   **Category**: categories of equipment (it may belong to
