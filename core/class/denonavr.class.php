@@ -1,50 +1,50 @@
 <?php
 
 /* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
- */
+*
+* Jeedom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* Jeedom is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+*/
 
 /* * ***************************Includes********************************* */
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class denonavr extends eqLogic {
 	/*     * *************************Attributs****************************** */
-
+	
 	const MAX_VOLUME = 19;
 	const MIN_VOLUME = -79;
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	public static function cron15() {
 		foreach (eqLogic::byType('denonavr', true) as $eqLogic) {
 			$eqLogic->updateInfo();
 		}
 	}
-
+	
 	/*     * *********************Méthodes d'instance************************* */
-
+	
 	public function preInsert() {
 		$this->setCategory('multimedia', 1);
 	}
-
+	
 	public function preUpdate() {
 		if ($this->getConfiguration('ip') == '') {
 			throw new Exception(__('Le champs IP ne peut etre vide', __FILE__));
 		}
 	}
-
+	
 	public function postSave() {
 		$cmd = $this->getCmd(null, 'power_state');
 		if (!is_object($cmd)) {
@@ -59,7 +59,7 @@ class denonavr extends eqLogic {
 		$cmd->setDisplay('generic_type', 'ENERGY_STATE');
 		$cmd->save();
 		$power_state_id = $cmd->getId();
-
+		
 		$cmd = $this->getCmd(null, 'input');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -72,7 +72,7 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'volume');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -87,7 +87,7 @@ class denonavr extends eqLogic {
 		$cmd->setDisplay('generic_type', 'LIGHT_STATE');
 		$cmd->save();
 		$volume_id = $cmd->getId();
-
+		
 		$cmd = $this->getCmd(null, 'sound_mode');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -100,7 +100,7 @@ class denonavr extends eqLogic {
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->setDisplay('generic_type', 'GENERIC');
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'volume_set');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -115,7 +115,7 @@ class denonavr extends eqLogic {
 		$cmd->setValue($volume_id);
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'on');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -131,7 +131,7 @@ class denonavr extends eqLogic {
 		$cmd->setDisplay('generic_type', 'ENERGY_ON');
 		$cmd->setValue($power_state_id);
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'off');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -147,7 +147,7 @@ class denonavr extends eqLogic {
 		$cmd->setDisplay('generic_type', 'ENERGY_OFF');
 		$cmd->setValue($power_state_id);
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'refresh');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -159,7 +159,7 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('other');
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
-
+		
 		$cmd = $this->getCmd(null, 'mute');
 		if (!is_object($cmd)) {
 			$cmd = new denonavrCmd();
@@ -171,9 +171,9 @@ class denonavr extends eqLogic {
 		$cmd->setSubType('other');
 		$cmd->setEqLogic_id($this->getId());
 		$cmd->save();
-
+		
 		$convert = array('3' => '2', '8' => '2', '9' => '2', '6' => '5', '11' => '5', '12' => '5', '13' => '5');
-
+		
 		$inputModel = array(
 			'1' => array(
 				'SAT/CBL' => 'CBL/SAT',
@@ -271,7 +271,7 @@ class denonavr extends eqLogic {
 				'PHONO' => 'Phono',
 			),
 		);
-
+		
 		if ($this->getConfiguration('ip') != '') {
 			$infos = $this->getAmpInfo();
 			$model = $infos['ModelId'];
@@ -296,9 +296,9 @@ class denonavr extends eqLogic {
 			}
 			$this->updateInfo();
 		}
-
+		
 	}
-
+	
 	public function getAmpInfo() {
 		$zone = '';
 		if ($this->getConfiguration('zone', 'main') == 2) {
@@ -329,7 +329,7 @@ class denonavr extends eqLogic {
 		}
 		return $data;
 	}
-
+	
 	public function updateInfo() {
 		if ($this->getConfiguration('ip') == '') {
 			return;
@@ -355,43 +355,55 @@ class denonavr extends eqLogic {
 			$this->checkAndUpdateCmd('sound_mode', $infos['selectSurround']);
 		}
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class denonavrCmd extends cmd {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	/*     * *********************Methode d'instance************************* */
-
+	
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
 		$zone = '';
 		if ($eqLogic->getConfiguration('zone', 'main') == 2) {
 			$zone = '&ZoneName=ZONE2';
 		}
-		if ($this->getLogicalId() == 'on') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
-			$request_http->exec(60);
-		} else if ($this->getLogicalId() == 'off') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
-			$request_http->exec(60);
-		} else if ($this->getLogicalId() == 'volume_set') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
-			$request_http->exec(60);
-		} else if ($this->getLogicalId() == 'mute') {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
-			$request_http->exec(60);
-		} else {
-			$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
+		if($eqLogic->getConfiguration('mode') == 'H'){
+			if ($this->getLogicalId() == 'on') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?ZMON');
+				$request_http->exec(60);
+			}else if ($this->getLogicalId() == 'off') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?ZMOFF');
+				$request_http->exec(60);
+			}else if ($this->getLogicalId() == 'volume_set') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?MV' . $_options['slider']);
+				$request_http->exec(60);
+			} else if ($this->getLogicalId() == 'mute') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?MV0');
+				$request_http->exec(60);
+			}
+		}else{
+			if ($this->getLogicalId() == 'on') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
+			} else if ($this->getLogicalId() == 'off') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
+			} else if ($this->getLogicalId() == 'volume_set') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
+			} else if ($this->getLogicalId() == 'mute') {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
+			} else {
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
+			}
 			$request_http->exec(60);
 		}
 		sleep(1);
 		$eqLogic->updateInfo();
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
