@@ -44,7 +44,7 @@ En dessous vous retrouvez la liste des commandes :
 -   **Options** : vous permet d’afficher ou de masquer certaines
     commandes et/ou d’en historiser
 
--   **Tester** : permet de tester la commande
+-   **Test**: allows to test the command
 
 > **Note**
 >
