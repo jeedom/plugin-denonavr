@@ -7,7 +7,7 @@ selectionnée et le type audio.
 Plugin configuration
 =======================
 
-Après téléchargement du plugin, il vous faudra simplement activer le
+After downloading the plugin, you will only have to activate the
 plugin
 
 Equipment configuration
