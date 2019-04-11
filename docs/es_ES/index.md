@@ -24,7 +24,7 @@ Aquí encontrará toda la configuración de su dispositivo:
     equipos,
 
 -   ** ** Categoría: categorías de equipos (que pueden pertenecer a
-    plusieurs catégories),
+    varias categorías),
 
 -   ** ** Activar: para que su equipo activo,
 
