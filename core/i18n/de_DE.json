@@ -1,0 +1,47 @@
+{
+    "desktop\/js\/denonavr.js": {
+        "Nom": "Name",
+        "Afficher": "Anzeige",
+        "Historiser": "historisieren",
+        "Tester": "Test"
+    },
+    "desktop\/php\/denonavr.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Gestion": "Management",
+        "Ajouter": "hinzufügen",
+        "Mes Denons": "Meine Denons",
+        "Rechercher": "Suche",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "speichern",
+        "Supprimer": "Entfernen",
+        "Equipement": "Ausrüstung",
+        "Commandes": "Befehle",
+        "Nom de l'équipement denon": "Name der Denon-Ausrüstung",
+        "Objet parent": "Übergeordnetes Objekt",
+        "Aucun": "keine",
+        "Activer": "activate",
+        "Visible": "sichtbar",
+        "IP": "IP",
+        "Zone": "Zone",
+        "Peut être éteint": "Kann ausgeschaltet werden",
+        "API Mode": "API-Modus",
+        "Standard": "Standard",
+        "Heos": "Heos",
+        "Nom": "Name",
+        "Options": "Optionen",
+        "Action": "Aktion"
+    },
+    "core\/class\/denonavr.class.php": {
+        "Le champs IP ne peut etre vide": "IP field cannot be empty",
+        "Etat": "State",
+        "Entrée": "Entrance",
+        "Volume": "volumen",
+        "Audio": "audio",
+        "Volume niveau": "Volume level",
+        "On": "We",
+        "Off": "off",
+        "Rafraîchir": "Refresh",
+        "Muet": "Mute"
+    }
+}
