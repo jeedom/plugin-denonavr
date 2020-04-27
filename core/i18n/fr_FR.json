@@ -1,11 +1,5 @@
 {
-    "desktop\/js\/denonavr.js": {
-        "Nom": "Nom",
-        "Afficher": "Afficher",
-        "Historiser": "Historiser",
-        "Tester": "Tester"
-    },
-    "desktop\/php\/denonavr.php": {
+    "plugins\/denonavr\/desktop\/php\/denonavr.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -32,7 +26,13 @@
         "Options": "Options",
         "Action": "Action"
     },
-    "core\/class\/denonavr.class.php": {
+    "plugins\/denonavr\/desktop\/js\/denonavr.js": {
+        "Nom": "Nom",
+        "Afficher": "Afficher",
+        "Historiser": "Historiser",
+        "Tester": "Tester"
+    },
+    "plugins\/denonavr\/core\/class\/denonavr.class.php": {
         "Le champs IP ne peut etre vide": "Le champs IP ne peut etre vide",
         "Etat": "Etat",
         "Entrée": "Entrée",

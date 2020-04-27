@@ -1,55 +1,55 @@
-Plugin pour commander les amplificateurs Denon. Vous pourrez contrôler
-les entrées à utiliser, sortie de veille, mettre en veille
-l’amplificateur et contrôler le volume. Vous avez aussi un retour d’état
-indiquant si la zone est active, le niveau de volume, l’entrée
-selectionnée et le type audio.
+. 
 
-configuración del plugin
+. 
+
+.
+
+Configuración del Plugin 
 =======================
 
-Après téléchargement du plugin, il vous faudra simplement activer le
-plugin
+Después de descargar el complemento, simplemente deberá activar el
+Plugin
 
-Configuración del dispositivo
+Configuración del equipo 
 =============================
 
-La configuration des équipements Denon est accessible à partir du menu
-Plugins puis multimedia
 
-Aquí encontrará toda la configuración de su dispositivo:
 
--   **Nom de l’équipement Denon** : nom de votre équipement Denon,
 
--   **Objeto padre** : especifica el objeto padre al que pertenece
-    equipos,
+Aquí encontrarás toda la configuración de tu equipo :
 
--   ** ** Categoría: categorías de equipos (que pueden pertenecer a
-    varias categorías),
+-   **** : ,
 
--   ** ** Activar: para que su equipo activo,
+-   **Objeto padre** : indica el objeto padre al que pertenece
+    equipo,
 
--   ** ** visible hace que su equipo visible en el salpicadero,
+-   **Categoría** : categorías de equipos (puede pertenecer a
+    categorías múltiples),
 
--   **IP** : IP de l’amplificateur denon
+-   **Activar** : activa su equipo,
 
--   **Zone** : zone à contrôler (principale ou zone 2)
+-   **Visible** : hace que su equipo sea visible en el tablero,
 
-A continuación encontrará la lista de ordenes :
+-   **IP** : 
 
--   **Nom** : le nom affiché sur le dashboard,
+-   **Zona** : 
 
--   **Configuration avancé** : permet d’afficher la fenêtre de
-    configuration avancée de la commande,
+A continuación encontrará la lista de pedidos. :
 
--   **Options** : vous permet d’afficher ou de masquer certaines
-    commandes et/ou d’en historiser
+-   **Nombre** : el nombre que se muestra en el tablero,
 
--   **Tester** : permet de tester la commande
+-   **** : 
+    ,
 
-> **Note**
+-   **Opciones** : 
+    
+
+-   **Probar** : Se usa para probar el comando
+
+> **Nota**
 >
-> Les commandes sont générées automatiquement en fonction du modèle de
-> votre amplificateur
+> 
+> 
 
-Changelog détaillé :
-<https://github.com/jeedom/plugin-denonavr/commits/stable>
+Registro de cambios detallado :
+<https://github.com/jeedom/Plugin-denonavr/commits/stable>
