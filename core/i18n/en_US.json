@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Gestion": "Management",
         "Ajouter": "Add",
-        "Mes Denons": "",
+        "Mes Denons": "My Denons",
         "Rechercher": "Search",
         "Configuration avancée": "Advanced configuration",
         "Dupliquer": "Duplicate",
@@ -11,17 +11,17 @@
         "Supprimer": "Delete",
         "Equipement": "Equipment",
         "Commandes": "Commands",
-        "Nom de l'équipement denon": "",
+        "Nom de l'équipement denon": "Name of the Denon Equipment",
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Activer": "Activate",
         "Visible": "Visible",
         "IP": "IP",
         "Zone": "Zoned",
-        "Peut être éteint": "",
-        "API Mode": "",
+        "Peut être éteint": "Can be powered off",
+        "API Mode": "Api Mode",
         "Standard": "Standard",
-        "Heos": "",
+        "Heos": "Heos",
         "Nom": "Name",
         "Options": "Options",
         "Action": "Action"
@@ -33,15 +33,15 @@
         "Tester": "Test"
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
-        "Le champs IP ne peut etre vide": "",
+        "Le champs IP ne peut etre vide": "The Ip field can\\'t be empty",
         "Etat": "State",
         "Entrée": "Entrance",
         "Volume": "Volume",
-        "Audio": "",
-        "Volume niveau": "",
+        "Audio": "Audio",
+        "Volume niveau": "Volume Level",
         "On": "We",
         "Off": "Off",
         "Rafraîchir": "Refresh",
-        "Muet": ""
+        "Muet": "Mute"
     }
 }

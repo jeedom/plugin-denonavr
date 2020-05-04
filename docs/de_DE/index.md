@@ -1,24 +1,24 @@
-. 
-
-. 
-
-.
+Plugin zur Steuerung von Denon-Verstärkern. Sie können steuern
+Eingaben zu verwenden, aufzuwachen, in den Ruhezustand zu versetzen
+den Verstärker und regeln die Lautstärke. Sie haben auch Status-Feedback
+Anzeige, ob die Bereich aktiv ist, die Lautstärke, die Eingabe
+ausgewählt und der Audiotyp.
 
 Plugin Konfiguration 
 =======================
 
 Nach dem Herunterladen des Plugins müssen Sie lediglich das aktivieren
-Plugin
+plugin
 
 Gerätekonfiguration 
 =============================
 
-
-
+Die Konfiguration der Denon-Geräte ist über das Menü zugänglich
+Plugins dann Multimedia
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
--   **** : ,
+-   **Name der Denon-Ausrüstung** : Name Ihrer Denon-Ausrüstung,
 
 -   **Übergeordnetes Objekt** : gibt das übergeordnete Objekt an, zu dem es gehört
     Ausrüstung,
@@ -26,30 +26,30 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 -   **Kategorie** : Gerätekategorien (es kann gehören
     mehrere Kategorien),
 
--   **Aktivieren** : macht Ihre Ausrüstung aktiv,
+-   **Activer** : macht Ihre Ausrüstung aktiv,
 
--   **Sichtbar** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
+-   **Visible** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
 
--   **IP** : 
+-   **IP** : Denon-Verstärker ip
 
--   **Bereich** : 
+-   **Zone** : zu kontrollierende Bereich (Haupt- oder Bereich 2)
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
--   **Name** : Der im Dashboard angezeigte Name,
+-   **Nom** : Der im Dashboard angezeigte Name,
 
--   **** : 
-    ,
+-   **Erweiterte Konfiguration** : ermöglicht die Anzeige des Fensters von
+    erweiterte Steuerungskonfiguration,
 
--   **Optionen** : 
-    
+-   **Options** : ermöglicht es Ihnen, bestimmte ein- oder auszublenden
+    Bestellungen und / oder um sie aufzuzeichnen
 
--   **Test** : Wird zum Testen des Befehls verwendet
+-   **Tester** : Wird zum Testen des Befehls verwendet
 
-> **Notiz**
+> **Note**
 >
-> 
-> 
+> Bestellungen werden automatisch nach dem Modell von generiert
+> Ihr Verstärker
 
 Changelog detailliert :
-<https://github.com/jeedom/Plugin-denonavr/commits/stable>
+<https://github.com/jeedom/plugin-denonavr/commits/stable>

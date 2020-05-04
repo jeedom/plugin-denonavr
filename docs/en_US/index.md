@@ -1,24 +1,24 @@
-. 
-
-. 
-
-.
+Plugin to control Denon amplifiers. You will be able to control
+inputs to use, wake up, put to sleep
+the amplifier and control the volume. You also have status feedback
+indicating whether the zone is active, the volume level, the input
+selected and the audio type.
 
 Plugin configuration 
 =======================
 
-After downloading the Plugin, you will simply need to activate the
-Plugin
+After downloading the plugin, you will simply need to activate the
+plugin
 
 Equipment configuration 
 =============================
 
-
-
+The configuration of Denon equipment is accessible from the menu
+Plugins then multimedia
 
 Here you find all the configuration of your equipment :
 
--   **** : ,
+-   **Name of the Denon Equipment** : name of your Denon equipment,
 
 -   **Parent object** : indicates the parent object to which belongs
     equipment,
@@ -26,30 +26,30 @@ Here you find all the configuration of your equipment :
 -   **Category** : equipment categories (it may belong to
     multiple categories),
 
--   **Activate** : makes your equipment active,
+-   **Activer** : makes your equipment active,
 
 -   **Visible** : makes your equipment visible on the dashboard,
 
--   **IP** : 
+-   **IP** : Denon amplifier ip
 
--   **Zoned** : 
+-   **Zone** : zone to be controlled (main or zone 2)
 
 Below you find the list of orders :
 
--   **Name** : the name displayed on the dashboard,
+-   **Nom** : the name displayed on the dashboard,
 
--   **** : 
-    ,
+-   **Advanced configuration** : allows to display the window of
+    advanced control configuration,
 
--   **Options** : 
-    
+-   **Options** : allows you to show or hide certain
+    orders and / or to record them
 
--   **Test** : Used to test the command
+-   **Tester** : Used to test the command
 
-> **NOTE**
+> **Note**
 >
-> 
-> 
+> Orders are generated automatically according to the model of
+> your amplifier
 
 Changelog detailed :
-<https://github.com/jeedom/Plugin-denonavr/commits/stable>
+<https://github.com/jeedom/plugin-denonavr/commits/stable>

@@ -1,24 +1,24 @@
-. 
-
-. 
-
-.
+Plugin para controlar amplificadores Denon. Podrás controlar
+entradas para usar, despertar, poner a dormir
+el amplificador y controla el volumen. También tienes comentarios de estado
+indicando si la zona está activa, el nivel de volumen, la entrada
+seleccionado y el tipo de audio.
 
 Configuración del Plugin 
 =======================
 
 Después de descargar el complemento, simplemente deberá activar el
-Plugin
+plugin
 
 Configuración del equipo 
 =============================
 
-
-
+Se puede acceder a la configuración del equipo Denon desde el menú
+Complementos luego multimedia
 
 Aquí encontrarás toda la configuración de tu equipo :
 
--   **** : ,
+-   **Denon nombre del equipo** : nombre de su equipo Denon,
 
 -   **Objeto padre** : indica el objeto padre al que pertenece
     equipo,
@@ -26,30 +26,30 @@ Aquí encontrarás toda la configuración de tu equipo :
 -   **Categoría** : categorías de equipos (puede pertenecer a
     categorías múltiples),
 
--   **Activar** : activa su equipo,
+-   **Activer** : activa su equipo,
 
 -   **Visible** : hace que su equipo sea visible en el tablero,
 
--   **IP** : 
+-   **IP** : Denon amplificador ip
 
--   **Zona** : 
+-   **Zone** : zona a controlar (principal o zona 2)
 
 A continuación encontrará la lista de pedidos. :
 
--   **Nombre** : el nombre que se muestra en el tablero,
+-   **Nom** : el nombre que se muestra en el tablero,
 
--   **** : 
-    ,
+-   **Configuración avanzada** : permite visualizar la ventana de
+    configuración de control avanzada,
 
--   **Opciones** : 
-    
+-   **Options** : le permite mostrar u ocultar ciertos
+    órdenes y / o grabarlos
 
--   **Probar** : Se usa para probar el comando
+-   **Tester** : Se usa para probar el comando
 
-> **Nota**
+> **Note**
 >
-> 
-> 
+> Los pedidos se generan automáticamente según el modelo de
+> tu amplificador
 
 Registro de cambios detallado :
-<https://github.com/jeedom/Plugin-denonavr/commits/stable>
+<https://github.com/jeedom/plugin-denonavr/commits/stable>
