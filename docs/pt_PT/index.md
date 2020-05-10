@@ -1,55 +1,32 @@
-Plugin para controlar amplificadores Denon. Você será capaz de controlar
-entradas para usar, acordar, dormir
-o amplificador e controlar o volume. Você também tem feedback de status
-indicando se a zona está ativa, o nível do volume, a entrada
-selecionado e o tipo de áudio.
+# Denon AVR
 
-Configuração do plugin 
-=======================
+Plugin para controlar amplificadores Denon. Você poderá controlar as entradas para usar, acordar, colocar o amplificador em espera e controlar o volume. Você também tem feedback de status indicando se a zona está ativa, o nível do volume, a entrada selecionada e o tipo de áudio..
 
-Após fazer o download do plug-in, basta ativar o
-plugin
+# Configuração do plugin
 
-Configuração do equipamento 
-=============================
+Depois de baixar o plug-in, basta ativar o plug-in
 
-A configuração do equipamento Denon pode ser acessada no menu
-Plugins e multimídia
+# Configuração do equipamento
+
+A configuração do equipamento Denon pode ser acessada no menu Plugins e depois em multimídia.
 
 Aqui você encontra toda a configuração do seu equipamento :
 
 -   **Nome do equipamento Denon** : nome do seu equipamento Denon,
-
--   **Objeto pai** : indica o objeto pai ao qual pertence
-    o equipamento,
-
--   **Categoria** : categorias de equipamentos (pode pertencer a
-    várias categorias),
-
+-   **Objeto pai** : indica o objeto pai ao qual o equipamento pertence,
+-   **Categoria** : categorias de equipamentos (pode pertencer a várias categorias),
 -   **Activer** : torna seu equipamento ativo,
-
 -   **Visible** : torna seu equipamento visível no painel,
-
 -   **IP** : Denon amplifier ip
-
 -   **Zone** : zona a ser controlada (principal ou zona 2)
 
 Abaixo você encontra a lista de pedidos :
 
 -   **Nom** : o nome exibido no painel,
-
--   **Configuração avançada** : permite exibir a janela de
-    configuração de controle avançado,
-
--   **Options** : permite mostrar ou ocultar certos
-    pedidos e / ou registrá-los
-
+-   **Configuração avançada** : exibe a janela de configuração avançada do comando,
+-   **Options** : permite exibir ou ocultar certos comandos e / ou registrá-los
 -   **Tester** : permite testar o comando
 
 > **Note**
 >
-> Os pedidos são gerados automaticamente de acordo com o modelo de
-> seu amplificador
-
-Registro de alterações detalhado :
-<https://github.com/jeedom/plugin-denonavr/commits/stable>
+> Os comandos são gerados automaticamente de acordo com o modelo do seu amplificador
