@@ -1,6 +1,6 @@
 # Denon AVR Plugin
 
-Plugin zur Steuerung von Denon-Verstärkern. Sie können die zu verwendenden Eingänge steuern, aufwachen, den Verstärker in den Standby-Modus versetzen und die Lautstärke steuern. Sie haben auch eine Statusrückmeldung, die angibt, ob die Zone aktiv ist, den Lautstärkepegel, den ausgewählten Eingang und den Audiotyp..
+Plugin zur Steuerung von Denon-Verstärkern. Sie können die zu verwendenden Eingänge steuern, aufwachen, den Verstärker in den Standby-Modus versetzen und die Lautstärke steuern. Sie haben auch eine Statusrückmeldung, die angibt, ob die Zone aktiv ist, den Lautstärkepegel, den ausgewählten Eingang und den Audiotyp.
 
 # Plugin Konfiguration
 
@@ -12,21 +12,21 @@ Auf die Konfiguration der Denon-Geräte kann über das Plugins-Menü und dann ü
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
--   **Name der Denon-Ausrüstung** : Name Ihrer Denon-Ausrüstung,
+-   **Name de l'équipement Denon** : Name Ihrer Denon-Ausrüstung,
 -   **Übergeordnetes Objekt** : Gibt das übergeordnete Objekt an, zu dem das Gerät gehört,
 -   **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören),
--   **Activer** : macht Ihre Ausrüstung aktiv,
--   **Visible** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
+-   **Aktivieren** : macht Ihre Ausrüstung aktiv,
+-   **Sichtbar** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
 -   **IP** : Denon-Verstärker ip
--   **Zone** : zu kontrollierende Zone (Haupt- oder Zone 2)
+-   **Bereich** : zu kontrollierende Zone (Haupt- oder Zone 2)
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
--   **Nom** : Der im Dashboard angezeigte Name,
+-   **Name** : Der im Dashboard angezeigte Name,
 -   **Erweiterte Konfiguration** : Zeigt das erweiterte Konfigurationsfenster des Befehls an,
--   **Options** : Mit dieser Option können Sie bestimmte Befehle anzeigen oder ausblenden und / oder protokollieren
--   **Tester** : Wird zum Testen des Befehls verwendet
+-   **Optionen** : Mit dieser Option können Sie bestimmte Befehle anzeigen oder ausblenden und / oder protokollieren
+-   **Test** : Wird zum Testen des Befehls verwendet
 
-> **Note**
+> **Notiz**
 >
 > Die Befehle werden automatisch entsprechend dem Modell Ihres Verstärkers generiert
