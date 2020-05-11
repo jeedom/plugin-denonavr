@@ -1,0 +1,47 @@
+{
+    "plugins\/denonavr\/desktop\/php\/denonavr.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Gestion": "Manajemen",
+        "Ajouter": "Tambahan",
+        "Mes Denons": "",
+        "Rechercher": "Pencarian",
+        "Configuration avancée": "Konfigurasi lanjutan",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
+        "Nom de l'équipement denon": "",
+        "Objet parent": "Objek induk",
+        "Aucun": "Tak ada",
+        "Activer": "Mengaktifkan",
+        "Visible": "Terlihat",
+        "IP": "",
+        "Zone": "",
+        "Peut être éteint": "",
+        "API Mode": "",
+        "Standard": "",
+        "Heos": "",
+        "Nom": "Nama",
+        "Options": "Pilihan",
+        "Action": "Tindakan"
+    },
+    "plugins\/denonavr\/desktop\/js\/denonavr.js": {
+        "Nom": "Nama",
+        "Afficher": "Memenitikan",
+        "Historiser": "Historicize",
+        "Tester": "Coba"
+    },
+    "plugins\/denonavr\/core\/class\/denonavr.class.php": {
+        "Le champs IP ne peut etre vide": "",
+        "Etat": "Negara",
+        "Entrée": "",
+        "Volume": "Volume",
+        "Audio": "",
+        "Volume niveau": "",
+        "On": "",
+        "Off": "",
+        "Rafraîchir": "Dingin",
+        "Muet": ""
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "plugins\/denonavr\/desktop\/php\/denonavr.php": {
+        "401 - Accès non autorisé": "401 - Acesso não autorizado",
+        "Gestion": "Gestão",
+        "Ajouter": "Adicionar",
+        "Mes Denons": "Meus denons",
+        "Rechercher": "Pesquisa",
+        "Configuration avancée": "Configuração avançada",
+        "Dupliquer": "Duplicar",
+        "Sauvegarder": "Salvar",
+        "Supprimer": "Remover",
+        "Equipement": "Equipamento",
+        "Commandes": "Comandos",
+        "Nom de l'équipement denon": "Nome do equipamento Denon",
+        "Objet parent": "Objeto pai",
+        "Aucun": "Nemhum",
+        "Activer": "Ativar",
+        "Visible": "Visivél",
+        "IP": "IP",
+        "Zone": "Area",
+        "Peut être éteint": "Pode ser desligado",
+        "API Mode": "Modo API",
+        "Standard": "Padrão",
+        "Heos": "Heos",
+        "Nom": "Nome",
+        "Options": "Opções",
+        "Action": "Ação"
+    },
+    "plugins\/denonavr\/desktop\/js\/denonavr.js": {
+        "Nom": "Nome",
+        "Afficher": "Display",
+        "Historiser": "Historicizar",
+        "Tester": "Teste"
+    },
+    "plugins\/denonavr\/core\/class\/denonavr.class.php": {
+        "Le champs IP ne peut etre vide": "O campo IP não pode estar vazio",
+        "Etat": "Estado",
+        "Entrée": "Entrada",
+        "Volume": "Volume",
+        "Audio": "Áudio",
+        "Volume niveau": "Nível de volume",
+        "On": "Nós",
+        "Off": "Fora",
+        "Rafraîchir": "Legal",
+        "Muet": "Silenciar"
+    }
+}

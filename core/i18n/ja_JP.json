@@ -1,0 +1,47 @@
+{
+    "plugins\/denonavr\/desktop\/php\/denonavr.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Gestion": "管理",
+        "Ajouter": "加えます",
+        "Mes Denons": "",
+        "Rechercher": "検索",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
+        "Nom de l'équipement denon": "",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Activer": "アクティブ",
+        "Visible": "目に見えます",
+        "IP": "",
+        "Zone": "",
+        "Peut être éteint": "",
+        "API Mode": "",
+        "Standard": "",
+        "Heos": "",
+        "Nom": "表題",
+        "Options": "オプション",
+        "Action": "アクション"
+    },
+    "plugins\/denonavr\/desktop\/js\/denonavr.js": {
+        "Nom": "表題",
+        "Afficher": "ディスプレイ",
+        "Historiser": "Historicize",
+        "Tester": "テスト"
+    },
+    "plugins\/denonavr\/core\/class\/denonavr.class.php": {
+        "Le champs IP ne peut etre vide": "",
+        "Etat": "状態",
+        "Entrée": "",
+        "Volume": "ボリューム",
+        "Audio": "",
+        "Volume niveau": "",
+        "On": "",
+        "Off": "オフ",
+        "Rafraîchir": "クール",
+        "Muet": ""
+    }
+}

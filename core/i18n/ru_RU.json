@@ -1,0 +1,47 @@
+{
+    "plugins\/denonavr\/desktop\/php\/denonavr.php": {
+        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
+        "Gestion": "Управление",
+        "Ajouter": "Добавить",
+        "Mes Denons": "",
+        "Rechercher": "поиск",
+        "Configuration avancée": "Расширенные настройки",
+        "Dupliquer": "дубликат",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "удаление",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
+        "Nom de l'équipement denon": "",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Activer": "активировать",
+        "Visible": "Видимый",
+        "IP": "",
+        "Zone": "",
+        "Peut être éteint": "",
+        "API Mode": "",
+        "Standard": "",
+        "Heos": "",
+        "Nom": "Имя",
+        "Options": "Опции",
+        "Action": "Действие"
+    },
+    "plugins\/denonavr\/desktop\/js\/denonavr.js": {
+        "Nom": "Имя",
+        "Afficher": "дисплей",
+        "Historiser": "История",
+        "Tester": "Тест"
+    },
+    "plugins\/denonavr\/core\/class\/denonavr.class.php": {
+        "Le champs IP ne peut etre vide": "",
+        "Etat": "состояние",
+        "Entrée": "",
+        "Volume": "Громкость",
+        "Audio": "",
+        "Volume niveau": "",
+        "On": "",
+        "Off": "Выключить",
+        "Rafraîchir": "Обновить",
+        "Muet": ""
+    }
+}
