@@ -1,4 +1,4 @@
-# Denon AVR
+# Denon AVR Plugin
 
 Plugin zur Steuerung von Denon-Verstärkern. Sie können die zu verwendenden Eingänge steuern, aufwachen, den Verstärker in den Standby-Modus versetzen und die Lautstärke steuern. Sie haben auch eine Statusrückmeldung, die angibt, ob die Zone aktiv ist, den Lautstärkepegel, den ausgewählten Eingang und den Audiotyp..
 

@@ -1,4 +1,4 @@
-# Denon AVR
+# Denon AVR plugin
 
 Plugin para controlar amplificadores Denon. Você poderá controlar as entradas para usar, acordar, colocar o amplificador em espera e controlar o volume. Você também tem feedback de status indicando se a zona está ativa, o nível do volume, a entrada selecionada e o tipo de áudio..
 

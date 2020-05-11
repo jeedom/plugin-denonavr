@@ -8,7 +8,7 @@
         "IMPORTANT]": "Important]"
     },
     "index.md": {
-        "Denon AVR": "Denon AVR",
+        "Plugin Denon AVR": "Denon AVR plugin",
         "Plugin pour commander les amplificateurs Denon": "Plugin to control Denon amplifiers",
         "Vous pourrez contrôler les entrées à utiliser, sortie de veille, mettre en veille l'amplificateur et contrôler le volume": "You will be able to control the inputs to use, wake up, put the amplifier on standby and control the volume",
         "Vous avez aussi un retour d'état indiquant si la zone est active, le niveau de volume, l'entrée selectionnée et le type audio": "You also have status feedback indicating whether the zone is active, the volume level, the selected input and the audio type.",

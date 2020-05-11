@@ -1,4 +1,4 @@
-# Denon AVR
+# Denon AVR plugin
 
 Plugin to control Denon amplifiers. You will be able to control the inputs to use, wake up, put the amplifier on standby and control the volume. You also have status feedback indicating whether the zone is active, the volume level, the selected input and the audio type..
 
