@@ -1,13 +1,33 @@
 {
     "id": "denonavr",
     "name": "Denon",
-    "description": "Plugin permettant de piloter les amplificateurs Denon",
+    "description": {
+        "fr_FR": "Plugin permettant de piloter les amplificateurs Denon",
+        "en_US": "Plugin to control Denon amplifiers",
+        "es_ES": "Plugin para controlar amplificadores Denon",
+        "de_DE": "Plugin zur Steuerung von Denon-Verstärkern",
+        "pt_PT": "Plugin para controle de amplificadores Denon"
+    },
     "licence": "AGPL",
     "author": "Loïc",
     "require": "3.0",
     "category": "multimedia",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/multimedia\/denonavr\/changelog",
     "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/multimedia\/denonavr\/",
-    "language" : ["fr_FR","en_US","de_DE","sp_SP"],
-"compatibility" : ["miniplus","smart","rpi","docker","diy","mobile","v4"]
+    "language": [
+        "fr_FR",
+        "en_US",
+        "es_ES",
+        "de_DE",
+        "pt_PT"
+    ],
+    "compatibility": [
+        "miniplus",
+        "smart",
+        "rpi",
+        "docker",
+        "diy",
+        "mobile",
+        "v4"
+    ]
 }

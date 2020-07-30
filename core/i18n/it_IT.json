@@ -43,5 +43,8 @@
         "Off": "",
         "Rafraîchir": "Aggiorna",
         "Muet": ""
+    },
+    "info.json": {
+        "Plugin permettant de piloter les amplificateurs Denon": ""
     }
 }
