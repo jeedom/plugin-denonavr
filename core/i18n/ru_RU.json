@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
         "Gestion": "Управление",
         "Ajouter": "Добавить",
-        "Mes Denons": "",
+        "Mes Denons": "Mes Denons",
         "Rechercher": "поиск",
         "Configuration avancée": "Расширенные настройки",
         "Dupliquer": "дубликат",
@@ -11,19 +11,20 @@
         "Supprimer": "удаление",
         "Equipement": "Оборудование",
         "Commandes": "Команды",
-        "Nom de l'équipement denon": "",
+        "Nom de l'équipement denon": "Nom de l'équipement denon",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Activer": "активировать",
         "Visible": "Видимый",
-        "IP": "",
-        "Zone": "",
-        "Peut être éteint": "",
-        "API Mode": "",
-        "Standard": "",
-        "Heos": "",
+        "IP": "IP",
+        "Zone": "Zone",
+        "Peut être éteint": "Peut être éteint",
+        "API Mode": "API Mode",
+        "Standard": "Standard",
+        "Heos": "Heos",
         "Nom": "Имя",
         "Options": "Опции",
+        "Etat": "Etat",
         "Action": "Действие"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
@@ -33,18 +34,18 @@
         "Tester": "Тест"
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
-        "Le champs IP ne peut etre vide": "",
+        "Le champs IP ne peut etre vide": "Le champs IP ne peut etre vide",
         "Etat": "состояние",
-        "Entrée": "",
+        "Entrée": "Entrée",
         "Volume": "Громкость",
-        "Audio": "",
-        "Volume niveau": "",
-        "On": "",
+        "Audio": "Audio",
+        "Volume niveau": "Volume niveau",
+        "On": "On",
         "Off": "Выключить",
         "Rafraîchir": "Обновить",
-        "Muet": ""
+        "Muet": "Muet"
     },
     "info.json": {
-        "Plugin permettant de piloter les amplificateurs Denon": ""
+        "Plugin permettant de piloter les amplificateurs Denon": "Plugin permettant de piloter les amplificateurs Denon"
     }
 }

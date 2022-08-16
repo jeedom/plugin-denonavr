@@ -24,6 +24,7 @@
         "Heos": "Heos",
         "Nom": "Name",
         "Options": "Optionen",
+        "Etat": "Bundesland",
         "Action": "Aktion"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
@@ -34,7 +35,7 @@
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
         "Le champs IP ne peut etre vide": "Das IP-Feld darf nicht leer sein",
-        "Etat": "Zustand",
+        "Etat": "Bundesland",
         "Entrée": "Eintrag",
         "Volume": "Lautstärke",
         "Audio": "Audio",

@@ -24,6 +24,7 @@
         "Heos": "Heos",
         "Nom": "Nombre",
         "Options": "Opciones",
+        "Etat": "Estado",
         "Action": "Acción"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
