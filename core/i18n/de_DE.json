@@ -35,7 +35,7 @@
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
         "Le champs IP ne peut etre vide": "Das IP-Feld darf nicht leer sein",
-        "Etat": "Bundesland",
+        "Etat": "Zustand",
         "Entrée": "Eintrag",
         "Volume": "Lautstärke",
         "Audio": "Audio",
