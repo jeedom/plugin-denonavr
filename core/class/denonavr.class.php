@@ -289,7 +289,7 @@ class denonavr extends eqLogic {
 					}
 					$cmd->setType('action');
 					$cmd->setSubType('other');
-					$cmd->setEventOnly(1);
+					//$cmd->setEventOnly(1);
 					$cmd->setEqLogic_id($this->getId());
 					$cmd->save();
 				}

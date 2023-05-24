@@ -24,6 +24,7 @@
         "Heos": "Heos",
         "Nom": "Name",
         "Options": "Options",
+        "Etat": "State",
         "Action": "Action"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
@@ -43,5 +44,8 @@
         "Off": "Off",
         "Rafraîchir": "Refresh",
         "Muet": "Mute"
+    },
+    "info.json": {
+        "Plugin permettant de piloter les amplificateurs Denon": "Plugin to control Denon amplifiers"
     }
 }

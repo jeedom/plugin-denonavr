@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Yetkisiz erişim",
         "Gestion": "Idare",
         "Ajouter": "Ekle",
-        "Mes Denons": "",
+        "Mes Denons": "Mes Denons",
         "Rechercher": "Arayın",
         "Configuration avancée": "Gelişmiş ayarlar",
         "Dupliquer": "Kopyala",
@@ -11,19 +11,20 @@
         "Supprimer": "Sil",
         "Equipement": "Cihaz",
         "Commandes": "Komutalar",
-        "Nom de l'équipement denon": "",
+        "Nom de l'équipement denon": "Nom de l'équipement denon",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Activer": "Etkinleştir",
         "Visible": "Görülebilir",
-        "IP": "",
-        "Zone": "",
-        "Peut être éteint": "",
-        "API Mode": "",
-        "Standard": "",
-        "Heos": "",
+        "IP": "IP",
+        "Zone": "Zone",
+        "Peut être éteint": "Peut être éteint",
+        "API Mode": "API Mode",
+        "Standard": "Standard",
+        "Heos": "Heos",
         "Nom": "İsim",
         "Options": "Opsiyonlar",
+        "Etat": "Etat",
         "Action": "Eylem"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
@@ -33,15 +34,18 @@
         "Tester": "Test et"
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
-        "Le champs IP ne peut etre vide": "",
+        "Le champs IP ne peut etre vide": "Le champs IP ne peut etre vide",
         "Etat": "Durum",
-        "Entrée": "",
+        "Entrée": "Entrée",
         "Volume": "Ses",
-        "Audio": "",
-        "Volume niveau": "",
-        "On": "",
-        "Off": "",
+        "Audio": "Audio",
+        "Volume niveau": "Volume niveau",
+        "On": "On",
+        "Off": "Off",
         "Rafraîchir": "Yenile",
-        "Muet": ""
+        "Muet": "Muet"
+    },
+    "info.json": {
+        "Plugin permettant de piloter les amplificateurs Denon": "Plugin permettant de piloter les amplificateurs Denon"
     }
 }

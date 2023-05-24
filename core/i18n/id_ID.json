@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Gestion": "Manajemen",
         "Ajouter": "Tambahan",
-        "Mes Denons": "",
+        "Mes Denons": "Mes Denons",
         "Rechercher": "Pencarian",
         "Configuration avancée": "Konfigurasi lanjutan",
         "Dupliquer": "Duplikat",
@@ -11,19 +11,20 @@
         "Supprimer": "Menghapus",
         "Equipement": "Peralatan",
         "Commandes": "Perintah",
-        "Nom de l'équipement denon": "",
+        "Nom de l'équipement denon": "Nom de l'équipement denon",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "IP": "",
-        "Zone": "",
-        "Peut être éteint": "",
-        "API Mode": "",
-        "Standard": "",
-        "Heos": "",
+        "IP": "IP",
+        "Zone": "Zone",
+        "Peut être éteint": "Peut être éteint",
+        "API Mode": "API Mode",
+        "Standard": "Standard",
+        "Heos": "Heos",
         "Nom": "Nama",
         "Options": "Pilihan",
+        "Etat": "Etat",
         "Action": "Tindakan"
     },
     "plugins\/denonavr\/desktop\/js\/denonavr.js": {
@@ -33,15 +34,18 @@
         "Tester": "Coba"
     },
     "plugins\/denonavr\/core\/class\/denonavr.class.php": {
-        "Le champs IP ne peut etre vide": "",
+        "Le champs IP ne peut etre vide": "Le champs IP ne peut etre vide",
         "Etat": "Negara",
-        "Entrée": "",
+        "Entrée": "Entrée",
         "Volume": "Volume",
-        "Audio": "",
-        "Volume niveau": "",
-        "On": "",
-        "Off": "",
+        "Audio": "Audio",
+        "Volume niveau": "Volume niveau",
+        "On": "On",
+        "Off": "Off",
         "Rafraîchir": "Dingin",
-        "Muet": ""
+        "Muet": "Muet"
+    },
+    "info.json": {
+        "Plugin permettant de piloter les amplificateurs Denon": "Plugin permettant de piloter les amplificateurs Denon"
     }
 }
