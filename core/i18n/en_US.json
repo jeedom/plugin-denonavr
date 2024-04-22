@@ -17,6 +17,7 @@
         "Activer": "Activate",
         "Visible": "Visible",
         "IP": "IP",
+        "Port": "Port",
         "Zone": "Zoned",
         "Peut être éteint": "Can be powered off",
         "API Mode": "Api Mode",
