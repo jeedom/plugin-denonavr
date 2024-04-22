@@ -85,6 +85,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							</div>
 						</div>
 						<div class="form-group">
+							<label class="col-sm-3 control-label">{{Port}}</label>
+							<div class="col-sm-3">
+								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="port" />
+							</div>
+						</div>
+						<div class="form-group">
 							<label class="col-sm-3 control-label">{{Zone}}</label>
 							<div class="col-sm-3">
 								<select type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="zone">

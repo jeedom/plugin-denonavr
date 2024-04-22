@@ -304,7 +304,7 @@ class denonavr extends eqLogic {
 		if ($this->getConfiguration('zone', 'main') == 2) {
 			$zone = '?ZoneName=ZONE2';
 		}
-		$request_http = new com_http('http://' . $this->getConfiguration('ip') . '/goform/formMainZone_MainZoneXml.xml' . $zone);
+		$request_http = new com_http('http://' . $this->getConfiguration('ip').':'.$this->getConfiguration('port',80) . '/goform/formMainZone_MainZoneXml.xml' . $zone);
 		try {
 			$result = trim($request_http->exec());
 		} catch (Exception $e) {
@@ -374,29 +374,29 @@ class denonavrCmd extends cmd {
 		}
 		if($eqLogic->getConfiguration('mode') == 'H'){
 			if ($this->getLogicalId() == 'on') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?ZMON');
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip').':'.$this->getConfiguration('port',8080) . '/goform/formiPhoneAppDirect.xml?ZMON');
 				$request_http->exec(60);
 			}else if ($this->getLogicalId() == 'off') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?ZMOFF');
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip').':'.$this->getConfiguration('port',8080) . '/goform/formiPhoneAppDirect.xml?ZMOFF');
 				$request_http->exec(60);
 			}else if ($this->getLogicalId() == 'volume_set') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?MV' . $_options['slider']);
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip').':'.$this->getConfiguration('port',8080) . ':8080/goform/formiPhoneAppDirect.xml?MV' . $_options['slider']);
 				$request_http->exec(60);
 			} else if ($this->getLogicalId() == 'mute') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . ':8080/goform/formiPhoneAppDirect.xml?MV0');
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',8080). '/goform/formiPhoneAppDirect.xml?MV0');
 				$request_http->exec(60);
 			}
 		}else{
 			if ($this->getLogicalId() == 'on') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',80). '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FON' . $zone);
 			} else if ($this->getLogicalId() == 'off') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',80). '/MainZone/index.put.asp?cmd0=PutZone_OnOff%2FOFF' . $zone);
 			} else if ($this->getLogicalId() == 'volume_set') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',80). '/MainZone/index.put.asp?cmd0=PutMasterVolumeSet%2F' . $_options['slider'] . $zone);
 			} else if ($this->getLogicalId() == 'mute') {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',80). '/MainZone/index.put.asp?cmd0=PutVolumeMute/TOGGLE');
 			} else {
-				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') . '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
+				$request_http = new com_http('http://' . $eqLogic->getConfiguration('ip') .':'.$this->getConfiguration('port',80). '/MainZone/index.put.asp?cmd0=PutZone_InputFunction%2F' . $this->getLogicalId() . $zone);
 			}
 			$request_http->exec(60);
 		}
